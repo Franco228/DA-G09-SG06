@@ -1,0 +1,99 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 2px solid #0056b3;
+}
+
+/* Estilo del grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animaciones y transiciones */
+.btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #003f7f;
+}
+
+.slide-element {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Accesibilidad */
+h1, h2, h3, p {
+    color: #333;
+}
+
+/* Estilo con pseudo-elementos */
+article:nth-of-type(2) {
+    background-color: #f0f0f0;
+}
+
+h2::before {
+    content: "→ ";
+    color: #0056b3;
+    font-weight: bold;
+}
